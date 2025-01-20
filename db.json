@@ -1,0 +1,76 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "¿Cuándo usar let, var y const?",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/PztCEdIJITY/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=PztCEdIJITY",
+      "description": "¿A veces cuando estás programando sientes dificuldades en saber en qué momento utilizar let, var o const para declarar una variable? En este video te sacamos estas dudas, además de explicarte lo que es escopo global y local en JavaScript."
+    },
+    {
+      "id": 2,
+      "title": "¿Qué es JavaScript?",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/GJfOSoaXk4s/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
+      "description": "JavaScript: ¿qué es y cómo se hizo este lenguaje que genera muchas discusiones y debates entre la gente del área de desarrollo? "
+    },
+    {
+      "id": 3,
+      "title": "Box Model y Box sizing",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/ts9qfCKamKg/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=ts9qfCKamKg",
+      "description": "En este Alura+ nuestra instructora front-end, Jeanmarie Quijada, nos ayudará a entender que es Box Model, uno de los conceptos fundamentales para la construcción correcta de layouts de páginas web."
+    },
+    {
+      "id": 4,
+      "title": "Spring Framework. ¿Qué es?",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/t-iqt1b2qqk/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=t-iqt1b2qqk",
+      "description": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda."
+    },
+    {
+      "id": 5,
+      "title": "¿Qué es SQL y NoSQL?",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/cLLKVd5CNLc/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=cLLKVd5CNLc",
+      "description": "¿Cuáles son las diferencias entre una estructura de datos relacional (SQL) y una no relacional (NoSQL) y cuáles son las principales ventajas de cada una? Álvaro Camacho lo explica en este vídeo."
+    },
+    {
+      "id": 6,
+      "title": "Simplificando tu código en Java: Conoce los enum",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/EoPvlE85XAQ/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=EoPvlE85XAQ",
+      "description": "¿Escribir muchas variables del tipo constantes en Java te parece un proceso tedioso y que genera muchas líneas de código? En este Alura+ la instructora Génesys Rondón nos enseña a simplificar esta tarea usando un tipo de dato especial llamado enum."
+    },
+    {
+      "id": 7,
+      "title": "Descubre todo sobre el ChatGPT: Decifrando los Secretos de los Grandes Modelos de Lenguaje",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/PwheldW6V98/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=PwheldW6V98",
+      "description": "En este episodio, exploraremos cómo funcionan los Grandes Modelos de Lenguaje (LLMs) y qué son los Tokens. Descubre cómo adquieren contexto y se entrenan los LLM. Además, cubriremos los parámetros de ChatGPT y proporcionaremos ejemplos prácticos para una comprensión más profunda de los LLM. Aprende sobre la importancia de los datos y el papel fundamental de OpenAI en este escenario. Conoce ChatGPT entre bastidores y descubre cómo utilizarlo eficazmente."
+    },
+    {
+      "id": 8,
+      "title": "Como mantenerse despierto con IA",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/yHpAUOmAAd0/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=yHpAUOmAAd0",
+      "description": "¿Qué tal crear un despertador utilizando Interligencia Artificial? En este Alura+ nuestro instructor Alejandro Gamarra te enseñará como. ¡Ven a conocerlo!"
+    },
+    {
+      "id": 9,
+      "title": "Conociendo la API de Open AI",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/tDG29s1IVx8/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=tDG29s1IVx8",
+      "description": "¿Te interesa aprender a conectar tus aplicaciones Java con la API de OpenAI? En este video te llevaremos paso a paso desde la creación de tu cuenta hasta la exploración de los principales recursos de la API, incluyendo modelos, costos y el uso del playground."
+    }
+  ]
+}
