@@ -2,10 +2,12 @@ import { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import SectionCards from '../components/SectionCards'
 import FormNewVideo from '../components/Form/FormNewVideo'
+import GoToTop from '../components/GoToTop'
 
 
 const Home = ({ modalNewVideo, closeModalNewVideo }) => {
   const [videos, setVideos] = useState([])
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const categories = [
     {
@@ -34,6 +36,16 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
 
     fetchVideos()
   }, [])
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setIsScrolled(window.scrollY > 200);
+    })
+  }, [])
+
+  const goToTop = () => {
+    window.scrollTo({ top: 0 })
+  }
   
   return (
     <>
@@ -51,6 +63,9 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
           closeModal={closeModalNewVideo}
           categories={categories.map((category) => category.title)}
         />
+        {
+          isScrolled && <GoToTop goToTop={goToTop} />
+        }
       </main>
     </>
   )
