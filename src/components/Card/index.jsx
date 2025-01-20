@@ -7,7 +7,7 @@ const Card = ({ video, bgCard }) => {
 
   return (
     <article className={`${bgCard} flex flex-col overflow-hidden rounded-md p-1`}>
-      <Link to="/no" className="grow">
+      <Link to="/no" className="custom-focus-visible grow">
         <figure className="aspect-video overflow-hidden rounded-md">
           <img className="aspect-video size-full object-cover object-center" src={image} alt={`Miniatura del video: ${title}`} />
         </figure>
@@ -17,11 +17,11 @@ const Card = ({ video, bgCard }) => {
         </div>
       </Link>
       <div className="flex items-center justify-center gap-8 p-4">
-        <a className="flex items-center gap-2 text-white hover:underline hover:underline-offset-2" href="">
+        <a className="custom-focus-visible flex items-center gap-2 text-white hover:underline hover:underline-offset-2" href="">
           <TbEdit className="size-5" aria-hidden="true" />
           Editar
         </a>
-        <a className="flex items-center gap-2 text-red-500 hover:underline hover:underline-offset-2" href="">
+        <a className="custom-focus-visible flex items-center gap-2 text-red-500 hover:underline hover:underline-offset-2" href="">
           <TbTrash className="size-5" aria-hidden="true" />
           Eliminar
         </a>

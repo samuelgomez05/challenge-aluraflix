@@ -36,8 +36,8 @@ const ModalNewVideo = ({ modalNewVideo, closeModal, categories }) => {
         <Input label="Video" id="video" type="url" placeholder="Ingresa el enlace del video" required />
         <Textarea />
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
-          <button className="grow rounded-md border-2 border-primary bg-primary p-3 font-extrabold text-white transition-all duration-300 hover:saturate-150" type="submit">Guardar</button>
-          <button className="grow rounded-md border-2 border-primary bg-primary/10 p-3 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/20" type="reset">Limpiar</button>
+          <button className="custom-focus-visible grow rounded-md border-2 border-primary bg-primary p-3 font-extrabold text-white transition-all duration-300 hover:saturate-150" type="submit">Guardar</button>
+          <button className="custom-focus-visible grow rounded-md border-2 border-primary bg-primary/10 p-3 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/20" type="reset">Limpiar</button>
         </div>
       </form>
     </dialog>

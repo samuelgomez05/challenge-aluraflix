@@ -7,3 +7,9 @@
     font-family: "Onest", serif;
   }
 }
+
+@layer components {
+  .custom-focus-visible {
+    @apply focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+}
