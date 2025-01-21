@@ -134,15 +134,17 @@ const handleEditVideoSubmit = async (updatedVideo) => {
 };
 
 const handleDeleteVideo = async (id) => {
-  const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${id}`, {
-    method: "DELETE",
-  });
+  const confirmation = confirm("¿Estás seguro que deseas eliminar este video?");
 
-  const deletedVideo = await response.json();
-
-  setVideos((prevVideos) => prevVideos.filter((video) => video.id !== deletedVideo.id));
-
-  closeModal();
+  if (confirmation) {
+    const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${id}`, {
+      method: "DELETE",
+    });
+  
+    const deletedVideo = await response.json();
+  
+    setVideos((prevVideos) => prevVideos.filter((video) => video.id !== deletedVideo.id));
+  }
 };
 
   return (
