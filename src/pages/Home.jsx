@@ -69,16 +69,20 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
     goToTop()
   };
 
-  const openModalVideoEdit = () => {
+  const openModalVideoEdit = (id) => {
+    const videoToEdit = videos.find((video) => video.id === id);
+
+    setFormData({
+      title: videoToEdit.title,
+      category: videoToEdit.category,
+      image: videoToEdit.image,
+      video: videoToEdit.video,
+      description: videoToEdit.description,
+      id: videoToEdit.id,
+    });
+
     setIsEditing(true)
     openModalVideo()
-    setFormData({
-      title: "edicion titulo",
-      category: "Front End",
-      image: "https://img.youtube.com/vi/ov7vA5HFe6w/maxresdefault.jpg",
-      video: "https://www.youtube.com/watch?v=ov7vA5HFe6w",
-      description: "edicion descripcion"
-    })
   }
 
   const closeModal = () => {
@@ -93,7 +97,7 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
     })
   }
 
-  const handleCreateVideo = async (newVideo) => {
+  const handleCreateVideoSubmit = async (newVideo) => {
     const response = await fetch("https://67870174c4a42c916105610e.mockapi.io/alura/videos", {
       method: "POST",
       headers: {
@@ -103,9 +107,30 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
     });
 
     const createdVideo = await response.json();
+
     setVideos((prevVideos) => [...prevVideos, createdVideo]);
+    
     closeModal();
-    console.log("nuevo video agregado")
+};
+
+const handleEditVideoSubmit = async (updatedVideo) => {
+  const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${updatedVideo.id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedVideo),
+  });
+
+  const updatedData = await response.json();
+
+  setVideos((prevVideos) =>
+    prevVideos.map((video) =>
+      video.id === updatedData.id ? updatedData : video
+    )
+  );
+
+  closeModal();
 };
 
   return (
@@ -130,8 +155,7 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
           categories={categories.map((category) => category.title)}
           isEditing={isEditing}
           formData={formData}
-          submitVideo={handleCreateVideo}
-          /* onSubmit={isEditing ? handleEditVideo : handleCreateVideo} */
+          submitVideo={isEditing ? handleEditVideoSubmit : handleCreateVideoSubmit}
         />
         {
           isScrolled && <GoToTop goToTop={goToTop} />

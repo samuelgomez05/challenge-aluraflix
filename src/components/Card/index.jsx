@@ -22,7 +22,7 @@ const Card = ({ video, bgColor, handleCardClick, openModal }) => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-8 p-4">
-        <button className="custom-focus-visible flex items-center gap-2 text-white hover:underline hover:underline-offset-2" onClick={openModal}>
+        <button className="custom-focus-visible flex items-center gap-2 text-white hover:underline hover:underline-offset-2" onClick={() => openModal(id)}>
           <TbEdit className="size-5" aria-hidden="true" />
           Editar
         </button>

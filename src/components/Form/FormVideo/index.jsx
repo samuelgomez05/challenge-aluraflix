@@ -11,6 +11,7 @@ const FormVideo = ({ modalVideo, closeModal, categories, isEditing, formData, su
   const [image, setImage] = useState("")
   const [video, setVideo] = useState("")
   const [description, setDescription] = useState("")
+  const [id, setId] = useState(null)
 
   useEffect(() => {
     if (modalVideo) {
@@ -26,6 +27,7 @@ const FormVideo = ({ modalVideo, closeModal, categories, isEditing, formData, su
     setImage(formData.image);
     setVideo(formData.video);
     setDescription(formData.description);
+    setId(formData.id);
   }, [formData]);
 
   const closeWithEsc = (e) => {
@@ -40,12 +42,13 @@ const FormVideo = ({ modalVideo, closeModal, categories, isEditing, formData, su
     setImage("")
     setVideo("")
     setDescription("")
+    setId(null)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newVideo = { title, category, image, video, description };
+    const newVideo = { title, category, image, video, description, id };
     submitVideo(newVideo);
   };
 
