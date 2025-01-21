@@ -1,3 +1,6 @@
+import 'lite-youtube-embed/src/lite-yt-embed.js';
+import 'lite-youtube-embed/src/lite-yt-embed.css';
+
 const Banner = ({ video, bgColor }) => {
   const { title, category, image, video: videoUrl, description } = video
   let videoUrlId;
