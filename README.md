@@ -2,7 +2,7 @@
 
 <p align="center">4to challenge de la formación de Alura + Oracle (ONE)</p>
 
-![image](https://github.com/user-attachments/assets/f4601a57-d847-4331-9fde-8a7cc98f9458)
+![image](https://github.com/user-attachments/assets/d74dde14-71e7-489c-a100-a7a1471fbeed)
 
 ---
 
