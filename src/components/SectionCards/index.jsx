@@ -1,6 +1,6 @@
 import Card from '../Card'
 
-const SectionCards = ({ category, videos, handleCardClick, openModal }) => {
+const SectionCards = ({ category, videos, handleCardClick, openModal, deleteCard }) => {
   const { title, bgColor } = category
 
   return (
@@ -17,6 +17,7 @@ const SectionCards = ({ category, videos, handleCardClick, openModal }) => {
                 bgColor={bgColor}
                 handleCardClick={handleCardClick}
                 openModal={openModal}
+                deleteCard={deleteCard}
               />)
             }
           </div>

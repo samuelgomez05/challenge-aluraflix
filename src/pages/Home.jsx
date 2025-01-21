@@ -124,11 +124,20 @@ const handleEditVideoSubmit = async (updatedVideo) => {
 
   const updatedData = await response.json();
 
-  setVideos((prevVideos) =>
-    prevVideos.map((video) =>
-      video.id === updatedData.id ? updatedData : video
-    )
+  setVideos((prevVideos) => prevVideos.map((video) => video.id === updatedData.id ? updatedData : video)
   );
+
+  closeModal();
+};
+
+const handleDeleteVideo = async (id) => {
+  const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${id}`, {
+    method: "DELETE",
+  });
+
+  const deletedVideo = await response.json();
+
+  setVideos((prevVideos) => prevVideos.filter((video) => video.id !== deletedVideo.id));
 
   closeModal();
 };
@@ -147,6 +156,7 @@ const handleEditVideoSubmit = async (updatedVideo) => {
             videos={videos.filter((video) => video.category === category.title)}
             handleCardClick={handleCardClick}
             openModal={openModalVideoEdit}
+            deleteCard={handleDeleteVideo}
           />)
         }
         <FormVideo 
