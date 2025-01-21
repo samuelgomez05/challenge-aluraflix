@@ -52,15 +52,21 @@ const FormVideo = ({ modalVideo, closeModal, categories, isEditing, formData, su
     submitVideo(newVideo);
   };
 
+  const closeClickOutside = (e) => {
+    if (e.target === modalRef.current) {
+      closeModal();
+    }
+  };
+
   return (
-    <dialog ref={modalRef} className="mx-auto w-[90%] max-w-lg rounded-md bg-slate-800 p-6 backdrop:bg-secondary/50" onKeyDown={(e) => closeWithEsc(e)}>
-      <div className="mb-10 flex items-center justify-between gap-4 text-white">
+    <dialog ref={modalRef} className="modal mx-auto w-[90%] max-w-lg rounded-md bg-slate-800 backdrop:bg-secondary/50" onKeyDown={(e) => closeWithEsc(e)} onClick={closeClickOutside}>
+      <div className="flex items-center justify-between gap-4 p-6 pb-10 text-white">
         <h3 className="text-xl font-semibold">{isEditing ? "Editar video" : "Nuevo video"}</h3>
         <button className="custom-focus-visible transition-colors duration-300 hover:text-primary" type="button" aria-label="Cerrar modal de nuevo video" onClick={closeModal}>
           <TbX className="size-6" aria-hidden="true" />
         </button>
       </div>
-      <form onSubmit={handleSubmit} id="form" className="flex w-full flex-col gap-6">
+      <form onSubmit={handleSubmit} id="form" className="flex w-full flex-col gap-6 p-6 pt-0" autoComplete="off">
         <Input setValue={setTitle} label="Título" id="title" type="text" placeholder="Ingresa el título del video" value={title} required />
         <Select setValue={setCategory} categories={categories} value={category} />
         <Input setValue={setImage} label="Imagen" id="image" type="url" placeholder="Ingresa el enlace de la imagen del video" value={image} required />

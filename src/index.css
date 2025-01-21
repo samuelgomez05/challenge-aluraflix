@@ -12,4 +12,33 @@
   .custom-focus-visible {
     @apply focus-visible:outline-double focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
   }
+
+  .modal {
+    opacity: 0;
+    transition: overlay .3s ease-in-out, display .3s ease-in-out, opacity .3s ease-in-out;
+    transition-behavior: allow-discrete; /* Para animar el display del dialog y demas, al cerrar */
+
+    &::backdrop {
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    /* Cuando el dialog este abierto, restablecemos los estilos */
+    &[open] {
+      opacity: 1;
+  
+      &::backdrop {
+        opacity: 1;
+      }
+  
+      /* Estilos iniciales que se aplicaran cuando abramos el dialog, y tenga esa transicion */
+      @starting-style {
+        opacity: 0;
+  
+        &::backdrop {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }

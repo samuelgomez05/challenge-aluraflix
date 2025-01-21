@@ -52,7 +52,7 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
     }
 
     fetchVideos()
-  }, [selectedCardId])
+  }, [selectedCardId, videos])
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -86,15 +86,18 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
   }
 
   const closeModal = () => {
-    setIsEditing(false)
     closeModalVideo()
-    setFormData({
-      title: "",
-      category: "",
-      image: "",
-      video: "",
-      description: ""
-    })
+    
+    setTimeout(() => {
+      setIsEditing(false)
+      setFormData({
+        title: "",
+        category: "",
+        image: "",
+        video: "",
+        description: ""
+      })
+    }, 300) // Para respetar la animacion del modal y no se vean como los datos desaparecen al salir de editar
   }
 
   const handleCreateVideoSubmit = async (newVideo) => {
