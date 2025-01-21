@@ -1,14 +1,20 @@
 import { TbTrash } from "react-icons/tb";
 import { TbEdit } from "react-icons/tb";
+import { TbPlayerPlay } from "react-icons/tb";
 
 const Card = ({ video, bgColor, handleCardClick }) => {
   const { id, title, image, description } = video
 
   return (
     <article className={`${bgColor}/10 flex flex-col overflow-hidden rounded-md p-1`}>
-      <div onClick={() => handleCardClick(id)} className="custom-focus-visible grow cursor-pointer" tabIndex="0">
-        <figure className="aspect-video overflow-hidden rounded-md">
+      <div onClick={() => handleCardClick(id)} className="custom-focus-visible group grow cursor-pointer" tabIndex="0">
+        <figure className="relative aspect-video overflow-hidden rounded-md">
           <img className="aspect-video size-full object-cover object-center" src={image} alt={`Miniatura del video: ${title}`} />
+          <div className="pointer-events-none absolute inset-0 flex size-full select-none items-center justify-center bg-secondary/50 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
+            <span>
+             <TbPlayerPlay className="size-12" aria-hidden="true" />
+            </span>
+          </div>
         </figure>
         <div className="p-4">
           <h3 className="mb-2 line-clamp-2 text-base font-semibold text-white md:text-lg">{title}</h3>

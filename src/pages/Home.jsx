@@ -68,7 +68,7 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
       <main className="bg-secondary pb-[5.5rem] sm:pb-0">
         <Banner 
           video={dataBanner} 
-          bgColor={categories.filter((category) => category.title === dataBanner.category)[0]?.bgTitle || "bg-primary"}
+          bgColor={categories.filter((category) => category.title === dataBanner.category)[0]?.bgColor || "bg-primary"}
         />
         {
           categories.map((category) => <SectionCards
