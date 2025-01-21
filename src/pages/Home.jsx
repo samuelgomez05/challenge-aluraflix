@@ -7,7 +7,9 @@ import GoToTop from '../components/GoToTop'
 
 const Home = ({ modalNewVideo, closeModalNewVideo }) => {
   const [videos, setVideos] = useState([])
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [selectedCardId, setSelectedCardId] = useState(1)
+  const [dataBanner, setDataBanner] = useState({})
 
   const categories = [
     {
@@ -29,13 +31,25 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
 
   useEffect(() => {
     async function fetchVideos() {
-      const response = await fetch("http://localhost:3000/videos")
+      const response = await fetch("https://67870174c4a42c916105610e.mockapi.io/alura/videos")
       const data = await response.json()
       setVideos([...data])
     }
 
     fetchVideos()
   }, [])
+
+  useEffect(() => {
+    console.log('Tarjeta clickeada con ID:', selectedCardId);
+    async function fetchVideos() {
+      const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${selectedCardId}`)
+      const data = await response.json()
+      setDataBanner(data)
+      console.log('Datos de la tarjeta:', data);
+    }
+
+    fetchVideos()
+  }, [selectedCardId])
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -46,16 +60,25 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
   const goToTop = () => {
     window.scrollTo({ top: 0 })
   }
-  
+
+  const handleCardClick = (id) => {
+    setSelectedCardId(id)
+    goToTop()
+  };
+
   return (
     <>
       <main className="bg-secondary pb-[5.5rem] sm:pb-0">
-        <Banner />
+        <Banner 
+          video={dataBanner} 
+          bgColor={categories.filter((category) => category.title === dataBanner.category)[0]?.bgTitle || "bg-primary"}
+        />
         {
           categories.map((category) => <SectionCards
             key={category.title}
             category={category}
             videos={videos.filter((video) => video.category === category.title)}
+            handleCardClick={handleCardClick}
           />)
         }
         <FormNewVideo 
