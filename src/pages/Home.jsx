@@ -93,6 +93,21 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
     })
   }
 
+  const handleCreateVideo = async (newVideo) => {
+    const response = await fetch("https://67870174c4a42c916105610e.mockapi.io/alura/videos", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newVideo),
+    });
+
+    const createdVideo = await response.json();
+    setVideos((prevVideos) => [...prevVideos, createdVideo]);
+    closeModal();
+    console.log("nuevo video agregado")
+};
+
   return (
     <>
       <main className="bg-secondary pb-[5.5rem] sm:pb-0">
@@ -115,6 +130,8 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
           categories={categories.map((category) => category.title)}
           isEditing={isEditing}
           formData={formData}
+          submitVideo={handleCreateVideo}
+          /* onSubmit={isEditing ? handleEditVideo : handleCreateVideo} */
         />
         {
           isScrolled && <GoToTop goToTop={goToTop} />
