@@ -6,22 +6,22 @@ import Footer from './components/Footer';
 import Page404 from './pages/Page404';
 
 function App() {
-  const [modalNewVideo, setModalNewVideo] = useState(false)
+  const [modalVideo, setModalVideo] = useState(false)
 
-  const openModalNewVideo = () => {
-    setModalNewVideo(true)
+  const openModalVideo = () => {
+    setModalVideo(true)
   }
 
-  const closeModalNewVideo = () => {
-    setModalNewVideo(false)
+  const closeModalVideo = () => {
+    setModalVideo(false)
   }
 
   return (
     <>
       <Router>
-        <Header openModal={openModalNewVideo} />
+        <Header openModal={openModalVideo} />
         <Routes>
-          <Route path="/" element={<Home modalNewVideo={modalNewVideo} closeModalNewVideo={closeModalNewVideo} />} />
+          <Route path="/" element={<Home modalVideo={modalVideo} openModalVideo={openModalVideo} closeModalVideo={closeModalVideo} />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
         <Footer />

@@ -1,15 +1,23 @@
 import { useEffect, useState } from 'react'
 import Banner from '../components/Banner'
 import SectionCards from '../components/SectionCards'
-import FormNewVideo from '../components/Form/FormNewVideo'
+import FormVideo from '../components/Form/FormVideo'
 import GoToTop from '../components/GoToTop'
 
 
-const Home = ({ modalNewVideo, closeModalNewVideo }) => {
+const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
   const [videos, setVideos] = useState([])
   const [isScrolled, setIsScrolled] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState(1)
   const [dataBanner, setDataBanner] = useState({})
+  const [isEditing, setIsEditing] = useState(false)
+  const [formData, setFormData] = useState({
+    title: "",
+    category: "",
+    image: "",
+    video: "",
+    description: ""
+  })
 
   const categories = [
     {
@@ -37,12 +45,10 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
   }, [])
 
   useEffect(() => {
-    console.log('Tarjeta clickeada con ID:', selectedCardId);
     async function fetchVideos() {
       const response = await fetch(`https://67870174c4a42c916105610e.mockapi.io/alura/videos/${selectedCardId}`)
       const data = await response.json()
       setDataBanner(data)
-      console.log('Datos de la tarjeta:', data);
     }
 
     fetchVideos()
@@ -63,6 +69,30 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
     goToTop()
   };
 
+  const openModalVideoEdit = () => {
+    setIsEditing(true)
+    openModalVideo()
+    setFormData({
+      title: "edicion titulo",
+      category: "Front End",
+      image: "https://img.youtube.com/vi/ov7vA5HFe6w/maxresdefault.jpg",
+      video: "https://www.youtube.com/watch?v=ov7vA5HFe6w",
+      description: "edicion descripcion"
+    })
+  }
+
+  const closeModal = () => {
+    setIsEditing(false)
+    closeModalVideo()
+    setFormData({
+      title: "",
+      category: "",
+      image: "",
+      video: "",
+      description: ""
+    })
+  }
+
   return (
     <>
       <main className="bg-secondary pb-[5.5rem] sm:pb-0">
@@ -76,12 +106,15 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
             category={category}
             videos={videos.filter((video) => video.category === category.title)}
             handleCardClick={handleCardClick}
+            openModal={openModalVideoEdit}
           />)
         }
-        <FormNewVideo 
-          modalNewVideo={modalNewVideo} 
-          closeModal={closeModalNewVideo}
+        <FormVideo 
+          modalVideo={modalVideo} 
+          closeModal={closeModal}
           categories={categories.map((category) => category.title)}
+          isEditing={isEditing}
+          formData={formData}
         />
         {
           isScrolled && <GoToTop goToTop={goToTop} />

@@ -2,7 +2,7 @@ import { TbTrash } from "react-icons/tb";
 import { TbEdit } from "react-icons/tb";
 import { TbPlayerPlay } from "react-icons/tb";
 
-const Card = ({ video, bgColor, handleCardClick }) => {
+const Card = ({ video, bgColor, handleCardClick, openModal }) => {
   const { id, title, image, description } = video
 
   return (
@@ -22,10 +22,10 @@ const Card = ({ video, bgColor, handleCardClick }) => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-8 p-4">
-        <a className="custom-focus-visible flex items-center gap-2 text-white hover:underline hover:underline-offset-2" href="">
+        <button className="custom-focus-visible flex items-center gap-2 text-white hover:underline hover:underline-offset-2" onClick={openModal}>
           <TbEdit className="size-5" aria-hidden="true" />
           Editar
-        </a>
+        </button>
         <a className="custom-focus-visible flex items-center gap-2 text-red-500 hover:underline hover:underline-offset-2" href="">
           <TbTrash className="size-5" aria-hidden="true" />
           Eliminar
