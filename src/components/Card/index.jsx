@@ -1,11 +1,11 @@
 import { TbTrash } from "react-icons/tb";
 import { TbEdit } from "react-icons/tb";
 
-const Card = ({ video, bgCard, handleCardClick }) => {
+const Card = ({ video, bgColor, handleCardClick }) => {
   const { id, title, image, description } = video
 
   return (
-    <article className={`${bgCard} flex flex-col overflow-hidden rounded-md p-1`}>
+    <article className={`${bgColor}/10 flex flex-col overflow-hidden rounded-md p-1`}>
       <div onClick={() => handleCardClick(id)} className="custom-focus-visible grow cursor-pointer" tabIndex="0">
         <figure className="aspect-video overflow-hidden rounded-md">
           <img className="aspect-video size-full object-cover object-center" src={image} alt={`Miniatura del video: ${title}`} />

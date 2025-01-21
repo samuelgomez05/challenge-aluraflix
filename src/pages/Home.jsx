@@ -14,18 +14,15 @@ const Home = ({ modalNewVideo, closeModalNewVideo }) => {
   const categories = [
     {
       "title": "Front End",
-      "bgTitle": "bg-sky-400",
-      "bgCard": "bg-sky-400/10",
+      "bgColor": "bg-sky-400",
     },
     {
       "title": "Back End",
-      "bgTitle": "bg-green-400",
-      "bgCard": "bg-green-400/10",
+      "bgColor": "bg-green-400",
     },
     {
       "title": "Inteligencia Artificial",
-      "bgTitle": "bg-orange-400",
-      "bgCard": "bg-orange-400/10",
+      "bgColor": "bg-orange-400",
     }
   ]
 
