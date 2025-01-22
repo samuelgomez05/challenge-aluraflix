@@ -62,7 +62,7 @@
       "category": "Inteligencia Artificial",
       "image": "https://img.youtube.com/vi/PwheldW6V98/maxresdefault.jpg",
       "video": "https://www.youtube.com/watch?v=PwheldW6V98",
-      "description": "En este episodio, exploraremos cómo funcionan los Grandes Modelos de Lenguaje (LLMs) y qué son los Tokens. Descubre cómo adquieren contexto y se entrenan los LLM. Además, cubriremos los parámetros de ChatGPT y proporcionaremos ejemplos prácticos para una comprensión más profunda de los LLM. Aprende sobre la importancia de los datos y el papel fundamental de OpenAI en este escenario. Conoce ChatGPT entre bastidores y descubre cómo utilizarlo eficazmente."
+      "description": "En este episodio, exploraremos cómo funcionan los Grandes Modelos de Lenguaje (LLMs) y qué son los Tokens. Descubre cómo adquieren contexto y se entrenan los LLM. Además, cubriremos los parámetros de ChatGPT y proporcionaremos ejemplos prácticos para una comprensión más profunda de los LLM."
     },
     {
       "id": "9",
@@ -79,6 +79,78 @@
       "image": "https://img.youtube.com/vi/tDG29s1IVx8/maxresdefault.jpg",
       "video": "https://www.youtube.com/watch?v=tDG29s1IVx8",
       "description": "¿Te interesa aprender a conectar tus aplicaciones Java con la API de OpenAI? En este video te llevaremos paso a paso desde la creación de tu cuenta hasta la exploración de los principales recursos de la API, incluyendo modelos, costos y el uso del playground."
+    },
+    {
+      "id": "11",
+      "title": "7 Consejos de Diseño para Programadores Front-End",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/n189TdfbQIA/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=n189TdfbQIA",
+      "description": "Descubre 7 consejos prácticos para mejorar tus diseños web como programador Front-End. Basado en un artículo de Adam Wathan, creador de Tailwind CSS, te mostraré trucos sencillos que marcarán la diferencia en tus proyectos."
+    },
+    {
+      "id": "12",
+      "title": "¿Qué es React y por qué domina el desarrollo frontend?",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/kEMr0rFjB7E/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=kEMr0rFjB7E",
+      "description": "En este video te enseñaremos, con la calidad que siempre representa a EDteam, cómo funciona React, qué lo diferencia de otras tecnologías y, sobre todo, por qué es el rey del frontend."
+    },
+    {
+      "id": "13",
+      "title": "Los roles en frontend - La mejor explicación en español",
+      "category": "Front End",
+      "image": "https://img.youtube.com/vi/N8mFHB7JDkw/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=N8mFHB7JDkw",
+      "description": "Cómo nos muestra Álvaro en el vídeo, hay grandes oportunidades laborales para los desarrolladores de Frontend."
+    },
+    {
+      "id": "14",
+      "title": "Los roles en backend- La mejor explicación en español",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/ZTsi1e-VJIU/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=ZTsi1e-VJIU",
+      "description": "El backend es todo lo que ocurre en el lado del servidor para que una aplicación web funcione. En el servidor se manejan los datos, las API, la seguridad y los sistemas operativos. ¿Conoces cuales son los roles? Te lo explicamos en este video."
+    },
+    {
+      "id": "15",
+      "title": "¿Qué es Java y cuál es su historia?",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/E8weQyNVWug/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=E8weQyNVWug",
+      "description": "Java es el tercer lenguaje más usado en el mundo del desarrollo de software según el índice TIOBE (solo detrás de Python y C) y uno de los más demandados por las grandes empresas de tecnología. En este video te explicaremos por qué Java sigue dominando la web y no ha caído en más de 25 años."
+    },
+    {
+      "id": "16",
+      "title": "¿Cuál es el mejor lenguaje de programación de Backend para ti?",
+      "category": "Back End",
+      "image": "https://img.youtube.com/vi/eymgiK3y2mU/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=eymgiK3y2mU",
+      "description": "Si estas considerando dedicarte al desarrollo web Backend profesional, y has visto que hay muchos lenguajes de programación, y no sabes por cual decidirte, en este video te voy a dar una lista de lenguajes que puedes estudiar para obtener un trabajo bien remunerado o seguir avanzando en tu carrera como programador."
+    },
+    {
+      "id": "17",
+      "title": "La historia completa de la Inteligencia Artificial (por EDteam)",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/WCM0h9TX7cY/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=WCM0h9TX7cY",
+      "description": "Muchas personas creen que la Inteligencia Artificial nació con ChatGPT. Pero no. Eso es mentira. Su historia se remonta a los años 50 y ha evolucionado hasta lo que conocemos hoy en día."
+    },
+    {
+      "id": "18",
+      "title": "Ruta de Aprendizaje para aprender Inteligencia artificial",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/1dJ-x6Zxrmc/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=1dJ-x6Zxrmc",
+      "description": "Convertirse en un Ingeniero de Inteligencia Artificial (AI Engineer) o Ingeniero de Machine Learning (Machine Learning Engineer) no es una tarea fácil, sobre todo porque esta área abarca temas de programación, ciencia de datos y matemáticas, y las combina para crear aplicaciones prácticas."
+    },
+    {
+      "id": "19",
+      "title": "La 'IA' lo cambia TODO | Lo que deberías saber sobre la Inteligencia Artificial",
+      "category": "Inteligencia Artificial",
+      "image": "https://img.youtube.com/vi/bOQjgy1PhUg/maxresdefault.jpg",
+      "video": "https://www.youtube.com/watch?v=bOQjgy1PhUg",
+      "description": "En este vídeo profundizamos en el mundo de la inteligencia artificial: su evolución, cómo funciona, y su capacidad de cambiar dinámicas de poder entre las gigantes tecnológicas."
     }
   ]
 }
