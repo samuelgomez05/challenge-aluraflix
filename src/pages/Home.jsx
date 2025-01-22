@@ -22,15 +22,15 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
   const categories = [
     {
       "title": "Front End",
-      "bgColor": "bg-sky-400",
+      "bgColor": "bg-sky-500",
     },
     {
       "title": "Back End",
-      "bgColor": "bg-green-400",
+      "bgColor": "bg-green-500",
     },
     {
       "title": "Inteligencia Artificial",
-      "bgColor": "bg-orange-400",
+      "bgColor": "bg-orange-500",
     }
   ]
 
@@ -149,7 +149,7 @@ const handleDeleteVideo = async (id) => {
 
   return (
     <>
-      <main className="bg-secondary pb-[5.5rem] sm:pb-0">
+      <main className="bg-secondary">
         <Banner 
           video={dataBanner} 
           bgColor={categories.filter((category) => category.title === dataBanner.category)[0]?.bgColor || "bg-primary"}

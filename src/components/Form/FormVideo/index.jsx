@@ -74,7 +74,7 @@ const FormVideo = ({ modalVideo, closeModal, categories, isEditing, formData, su
         <Textarea setValue={setDescription} value={description} />
         <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
           <button className="custom-focus-visible grow rounded-md border-2 border-primary bg-primary p-3 font-extrabold text-white transition-all duration-300 hover:saturate-150" type="submit">Guardar</button>
-          <button onClick={cleanForm} className="custom-focus-visible grow rounded-md border-2 border-primary bg-primary/10 p-3 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/20" type="button">Limpiar</button>
+          <button onClick={cleanForm} className="custom-focus-visible grow rounded-md border-2 border-primary p-3 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/10" type="button">Limpiar</button>
         </div>
       </form>
     </dialog>

@@ -12,16 +12,16 @@ const Header = ({ openModal }) => {
     <header className="bg-secondary">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-center gap-6 px-4 py-6 text-white sm:justify-between md:px-8">
         <Link to="/" className='custom-focus-visible'>
-          <img className="aspect-[101/24] max-w-40" src="/img/logo.webp" alt="Logo de AluraFlix" />
+          <img className="aspect-[101/24] h-full max-w-40" src="/img/logo.webp" alt="Logo de AluraFlix" />
         </Link>
         <nav className="fixed inset-x-0 bottom-0 z-50 flex justify-center gap-6 bg-secondary py-6 sm:static sm:py-0">
-          <Link to="/" className="custom-focus-visible flex items-center gap-2 rounded-md border-2 border-primary bg-primary/10 px-4 py-2 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/20">
+          <Link to="/" className="custom-focus-visible flex items-center gap-2 rounded-md border-2 border-primary px-4 py-2 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/10">
             <TbHome className="size-5" aria-hidden="true" />
             <span className="sr-only sm:not-sr-only">Inicio</span>
           </Link>
           {
             isHomePage && 
-            <button className="custom-focus-visible flex items-center gap-2 rounded-md border-2 border-primary bg-primary/10 px-4 py-2 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/20" onClick={openModal}>
+            <button className="custom-focus-visible flex items-center gap-2 rounded-md border-2 border-primary px-4 py-2 font-extrabold text-primary transition-colors duration-300 hover:bg-primary/10" onClick={openModal}>
               <TbPlus className="size-5" aria-hidden="true" />
               <span className="sr-only sm:not-sr-only">Nuevo video</span>
             </button>
