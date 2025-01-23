@@ -5,9 +5,16 @@ import { TbPlayerPlay } from "react-icons/tb";
 const Card = ({ video, bgColor, handleCardClick, openModal, deleteCard }) => {
   const { id, title, image, description } = video
 
+  const openWithKeys = (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleCardClick(id)
+    }
+  }
+
   return (
     <article className={`${bgColor} bg-opacity-10 flex flex-col overflow-hidden rounded-md p-1`}>
-      <div onClick={() => handleCardClick(id)} className="custom-focus-visible group grow cursor-pointer" tabIndex="0">
+      <div onClick={() => handleCardClick(id)} onKeyDown={openWithKeys} className="custom-focus-visible group grow cursor-pointer" tabIndex="0" role="button" aria-label={`Ver video: ${title}`}>
         <figure className="relative aspect-video overflow-hidden rounded-md">
           <img className="aspect-video size-full object-cover object-center" src={image} alt={`Miniatura del video: ${title}`} loading="lazy" />
           <div className="pointer-events-none absolute inset-0 flex size-full select-none items-center justify-center bg-secondary/50 text-white opacity-0 transition-all duration-300 group-hover:opacity-100">
