@@ -11,7 +11,7 @@ const Banner = ({ video, bgColor }) => {
   }
 
   return (
-    <section className="relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/img/banner.webp')" }}>
+    <section className="relative bg-cover bg-center bg-no-repeat [mask-image:linear-gradient(black_90%,transparent)]" style={{ backgroundImage: "url('/img/banner.webp')" }}>
       <div className="absolute inset-0 size-full bg-secondary/50"></div>
       <div className="relative z-10 mx-auto flex max-w-screen-2xl flex-col gap-12 px-4 py-20 md:h-[37.5rem] md:flex-row md:items-center md:px-8">
         <div className="flex flex-col gap-4 text-white md:w-1/2">
