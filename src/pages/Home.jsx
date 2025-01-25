@@ -7,6 +7,7 @@ import GoToTop from '../components/GoToTop'
 
 const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
   const [videos, setVideos] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
   const [isScrolled, setIsScrolled] = useState(false)
   const [selectedCardId, setSelectedCardId] = useState(1)
   const [dataBanner, setDataBanner] = useState({})
@@ -39,6 +40,7 @@ const Home = ({ modalVideo, openModalVideo, closeModalVideo }) => {
       const response = await fetch("https://67870174c4a42c916105610e.mockapi.io/alura/videos")
       const data = await response.json()
       setVideos([...data])
+      setIsLoading(false)
     }
 
     fetchVideos()
@@ -162,6 +164,7 @@ const handleDeleteVideo = async (id) => {
             handleCardClick={handleCardClick}
             openModal={openModalVideoEdit}
             deleteCard={handleDeleteVideo}
+            isLoading={isLoading}
           />)
         }
         <FormVideo 
