@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Onest";
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/src/assets/font/Onest-VariableFont_wght.woff2") format("woff2-variations"),
+         url("/src/assets/font/Onest-VariableFont_wght.ttf") format("truetype");
+  }
+
   html {
     font-family: "Onest", serif;
   }
