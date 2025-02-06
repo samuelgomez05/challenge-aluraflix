@@ -1,4 +1,6 @@
-import 'ldrs/dotSpinner'
+import { dotSpinner } from 'ldrs'
+
+dotSpinner.register()
 
 const SkeletonCard = ({ bgColor }) => {
   return (
